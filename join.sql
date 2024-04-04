@@ -34,3 +34,10 @@ select * from studData right join college on studData.cid=college.cid;
 create table employee(eid int primary key,ename varchar(20) not null,designation varchar(20) not null,mid int);
 insert into employee values(1,'AAA','dev',6),(2,'BBB','HR',5),(3,'CCC','dev',6),(4,'DDD','dev',6),(5,'EEE','CEO',0),(6,'FFF','manager',5);
 select * from employee; 
+select e.ename as employee_name,e.designation,m.ename as manager_name,m.designation from employee as e inner join employee as m on m.eid=e.mid;
+select e.ename as employee_name,e.designation,m.ename as manager_name,m.designation from employee as e , employee as m where m.eid=e.mid;
+
+	-- cross join
+select studData.Sname,college.CName from studData cross join college;
+select StudData.Sname,college.CName from studData,college;
+select e.ename,m.ename from employee as e cross join employee as m;

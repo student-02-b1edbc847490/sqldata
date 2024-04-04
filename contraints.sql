@@ -25,4 +25,4 @@ insert into product values(101,'Bike'),(102,'Laptop'),(103,'Mobile');
 select * from product;
 insert into order1 values(201,3,102),(202,1,103);
 select * from order1;
-select user1.uid,product.
+select user1.uname,product.pname,payment.
